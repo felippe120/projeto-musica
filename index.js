@@ -25,7 +25,7 @@ const conexao = mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"musicasdb"
+    database:"musicadb"
 });
 
 /*
@@ -39,6 +39,11 @@ conexao.connect((erro)=>{
     console.log("Conectado ao banco ->"+conexao.threadId);
 })
 
-//Subir o servidor na porta 3000
+app.get("/listar/musica",(req,res)=>{
+    conexao.query("SELECT * FROM musicadb.tbmusicas;",(erro,resultado)=>{
+        res.status(200).send(resultado)
+    })
+})
+//Subir o servidor na porta 5000
 app.listen("5000",()=>console.log("Servidor online em: http://localhost:5000"));
 

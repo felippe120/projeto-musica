@@ -1,7 +1,11 @@
 div#parte1 {
   width: 100%;
-  height: 500px;
-  background-color: violet;
+  height: 800px;
+  background-image: url(../img/mesa-dj.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
 }
 
 div#parte2 {
@@ -19,12 +23,12 @@ div#parte3 {
 div#parte4 {
   width: 100%;
   height: 300px;
-  background-color: brown;
+  background-color: black;
 }
 body {
   margin: 0;
   box-sizing: border-box;
-  height: 3000px;
+  height: 1000px;
 }
 nav{
   background-color: #333;
@@ -50,4 +54,7 @@ nav a:hover{
   transition: 0.5s;
   background-color: #e4e4e4;
   color: #333
+}
+iframe{
+  margin: 40px;
 }
