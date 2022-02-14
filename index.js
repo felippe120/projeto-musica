@@ -25,7 +25,7 @@ const conexao = mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"musicadb"
+    database:"musicasdb"
 });
 
 /*
@@ -40,7 +40,7 @@ conexao.connect((erro)=>{
 })
 
 app.get("/listar/musica",(req,res)=>{
-    conexao.query("SELECT * FROM musicadb.tbmusicas;",(erro,resultado)=>{
+    conexao.query("SELECT * FROM musicasdb.tbmusica;",(erro,resultado)=>{
         res.status(200).send(resultado)
     })
 })
